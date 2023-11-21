@@ -8,8 +8,10 @@ function App() {
   return (
     <>
       <div className="flex flex-col justify-center items-center">
-        <Navigation />
-        <Hero />
+        <div>
+          <Navigation />
+          <Hero />
+        </div>
         <Features />
         <CryptoForm />
         <Transactions />

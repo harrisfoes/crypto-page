@@ -7,7 +7,7 @@ const FeatureCard = ({ features }) => {
   return (
     <>
       <article className="my-6 mx-4 p-1 rounded-md bg-gradient-to-b from-neutral-200 to-gradient max-w-sm">
-        <div className="bg-bg-1 p-8 rounded-md flex flex-col justify-center items-center">
+        <div className="bg-bg-1 p-8 rounded-md flex flex-col justify-start items-center">
           <div className="py-4">
             <img src={features.img} alt={features.altText} />
           </div>
@@ -48,7 +48,7 @@ function Features() {
     },
   ];
   return (
-    <article className="mt-4 pt-10 flex flex-col items-center">
+    <article className="mt-4 pt-10 flex flex-col items-center lg:grid lg:grid-cols-3 lg:my-24">
       {features.map((items) => {
         return <FeatureCard features={items} key={items.featureTitle} />;
       })}

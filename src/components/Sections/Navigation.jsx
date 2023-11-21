@@ -30,10 +30,10 @@ function Navigation() {
 
   return (
     <nav>
-      <div className="px-4 py-4 md:mx-36 grid grid-cols-2 items-center">
+      <div className="px-4 py-4 md:mx-32 grid grid-cols-2 items-center">
         <div className="grid grid-cols-2 self-center">
           <Logo />
-          <ul className="hidden md:flex md:gap-12 lg:text-xl">
+          <ul className="hidden lg:flex md:gap-12 xl:text-xl">
             {navLinks.map((items) => {
               return (
                 <NavLinks
@@ -45,7 +45,7 @@ function Navigation() {
             })}
           </ul>
         </div>
-        <div className="justify-self-end md:hidden">
+        <div className="justify-self-end lg:hidden">
           <img
             className="hover:cursor-pointer"
             src={mobileNav ? close : HamburgerMenu}
@@ -54,7 +54,7 @@ function Navigation() {
           />
         </div>
 
-        <div className="hidden md:block justify-self-end">
+        <div className="hidden lg:block justify-self-end">
           <ConnectWallet />
         </div>
       </div>
