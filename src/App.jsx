@@ -10,11 +10,11 @@ function App() {
       <div className="flex flex-col justify-center items-center">
         <Navigation />
         <Hero />
+        <Features />
+        <CryptoForm />
+        <Transactions />
+        <Footer />
       </div>
-      <Features />
-      <CryptoForm />
-      <Transactions />
-      <Footer />
     </>
   );
 }
