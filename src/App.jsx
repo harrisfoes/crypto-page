@@ -1,16 +1,20 @@
-import { useState } from "react";
-import Navigation from "./components/Navigation/Navigation";
-import Hero from "./components/Hero/Hero";
-import Features from "./components/Features/Features";
-
+import Navigation from "./components/Sections/Navigation";
+import Hero from "./components/Sections/Hero";
+import Features from "./components/Sections/Features";
+import CryptoForm from "./components/Sections/CryptoForm";
+import Transactions from "./components/Sections/Transactions";
+import Footer from "./components/Sections/Footer";
 function App() {
   return (
     <>
       <div className="flex flex-col justify-center items-center">
         <Navigation />
         <Hero />
-        <Features />
       </div>
+      <Features />
+      <CryptoForm />
+      <Transactions />
+      <Footer />
     </>
   );
 }

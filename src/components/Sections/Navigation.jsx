@@ -1,8 +1,8 @@
-import Logo from "./Logo";
+import Logo from "../Logo";
 import HamburgerMenu from "../../assets/navigation/menu.svg";
 import close from "../../assets/navigation/close.svg";
 import { useState } from "react";
-import MobileMenu from "./MobileMenu";
+import MobileMenu from "../MobileMenu";
 
 function Navigation() {
   const [mobileNav, setMobileNav] = useState(false);
