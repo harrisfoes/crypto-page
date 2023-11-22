@@ -29,9 +29,15 @@ function CryptoForm() {
     },
   ];
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
   return (
-    <article className="my-4 flex flex-col items-center">
-      <img src={heroImg} alt="coins" />
+    <article className="my-4 flex flex-col items-center lg:flex-row lg:justify-around lg:items-around w-full max-w-[1440px]">
+      <div>
+        <img src={heroImg} alt="coins" />
+      </div>
       <div className="bg-bg-2 p-6 mx-4 rounded-lg max-w-xl">
         <form>
           {formFields.map((items) => {
@@ -43,7 +49,10 @@ function CryptoForm() {
               />
             );
           })}
-          <button className="bg-primary w-full p-4 text-neutral-900 mt-2 rounded-lg">
+          <button
+            className="bg-primary w-full p-4 text-neutral-900 mt-2 rounded-lg hover:bg-primary-hover"
+            onSubmit={handleSubmit}
+          >
             Send Now
           </button>
         </form>

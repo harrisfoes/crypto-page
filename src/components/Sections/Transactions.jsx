@@ -8,13 +8,13 @@ import im5 from "../../assets/transactions/explore_image-5.png";
 
 const TransactionCard = ({ img, timestamp, from, to, amount, message }) => {
   return (
-    <div className="mt-4 p-6 bg-bg-2 rounded-lg w-max font-semibold">
+    <div className="p-6 bg-bg-2 rounded-lg w-max font-semibold">
       <img src={img} alt="im-1" />
       <div className="place-items-center bg-primary text-neutral-100 max-w-max p-1 rounded-md relative bottom-4 m-auto">
         {timestamp}
       </div>
       <div>
-        <span className="text-neutral-200">From:</span>
+        <span className="text-neutral-200">From: </span>
         {from}
       </div>
 
@@ -24,11 +24,11 @@ const TransactionCard = ({ img, timestamp, from, to, amount, message }) => {
       </div>
 
       <div>
-        <span className="text-neutral-200">Amount:</span>
+        <span className="text-neutral-200">Amount: </span>
         {amount}
       </div>
       <div>
-        <span className="text-neutral-200">Message:</span>
+        <span className="text-neutral-200">Message: </span>
         {message}
       </div>
     </div>
@@ -107,23 +107,24 @@ function Transactions() {
   let adjustedList = isMobile ? transactionList.slice(0, 2) : transactionList;
 
   return (
-    <article className="m-6 flex flex-col flex-wrap items-center justify-center">
-      <div className="lg:max-w-7xl lg:w-5/6">
-        <h1 className="text-3xl font-bold">Latest Transactions</h1>
-        {/*isMobile ? "mobile ni siya" : "desktop ni siya"*/}
-        {adjustedList.map((items) => {
-          return (
-            <TransactionCard
-              key={items.timestamp}
-              img={items.image}
-              timestamp={items.timestamp}
-              from={items.from}
-              to={items.to}
-              amount={items.amount}
-              message={items.message}
-            />
-          );
-        })}
+    <article className="m-6 flex flex-col flex-wrap items-center justify-center lg:my-12">
+      <div className="lg:max-w-7xl">
+        <h1 className="text-3xl font-bold mb-4">Latest Transactions</h1>
+        <div className="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+          {adjustedList.map((items) => {
+            return (
+              <TransactionCard
+                key={items.timestamp}
+                img={items.image}
+                timestamp={items.timestamp}
+                from={items.from}
+                to={items.to}
+                amount={items.amount}
+                message={items.message}
+              />
+            );
+          })}
+        </div>
       </div>
     </article>
   );
