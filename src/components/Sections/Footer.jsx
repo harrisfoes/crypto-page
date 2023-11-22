@@ -14,7 +14,7 @@ function Footer() {
         <img className="cursor-pointer" src={facebookLogo} alt="facebook" />
       </div>
       <p className="text-sm text-neutral-200 my-2">
-        Built by harrisfoes. Copyright © 2022 SendCrypt. All rights reserved
+        Built by harrisfoes. Figma design from Frontendpro.dev
       </p>
     </div>
   );

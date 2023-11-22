@@ -50,7 +50,7 @@ function CryptoForm() {
             );
           })}
           <button
-            className="bg-primary w-full p-4 text-neutral-900 mt-2 rounded-lg hover:bg-primary-hover"
+            className="bg-primary w-full p-4 text-neutral-900 mt-2 rounded-lg hover:bg-primary-hover font-semibold"
             onSubmit={handleSubmit}
           >
             Send Now
